@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+
 var pgp = require('pg-promise')(/* options */)
 const cn = {
     host: 'ec2-34-225-162-157.compute-1.amazonaws.com',
@@ -16,13 +17,14 @@ const db = pgp(cn);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	db.query('SELECT * from post;')
+  db.query('SELECT * from post;')
   .then(function (data) {
     console.log('DATA:', data[0].author)
     res.json({ author: data[0].author });
   })
   .catch(function (error) {
     console.log('ERROR:', error)
+    res.json({ author: "fail" })
   })
 });
 
