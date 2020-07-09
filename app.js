@@ -18,9 +18,10 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+// this serves express api.
 // app.use(express.static(path.join(__dirname, 'public')));
 // Serve static files from the React frontend app
-app.use(express.static(path.join(__dirname, '../client/build')))
+app.use(express.static(path.join(__dirname, 'client/build')))
 
 
 app.use('/', indexRouter);
@@ -29,7 +30,7 @@ app.use('/posts', postsRouter);
 
 // AFTER defining routes: Anything that doesn't match what's above, send back index.html; (the beginning slash ('/') in the string is important!)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/../frontend/build/index.html'))
+  res.sendFile(path.join(__dirname + 'client/build/index.html'))
 })
 
 // catch 404 and forward to error handler
