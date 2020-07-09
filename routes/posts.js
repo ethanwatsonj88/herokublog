@@ -12,6 +12,8 @@ const cn = {
     ssl: { rejectUnauthorized: false },
     max: 30 // use up to 30 connections
 };
+const db = pgp(cn);
+
 
 
 /* GET home page. */
