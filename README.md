@@ -5,3 +5,10 @@ NPM. UGHHHHH I had so many problems with npm. I kept having path's set to User i
 
 
 CRA (Create React App) hosts index.js. I can then fetch any node routes, not controlling the actual url of the heroku application. node api fetches right now only send data i believe to the client. I think since this is SPA it's different than node sending templates to render on each router.
+
+
+# Merge dev into master
+git checkout master
+git pull origin master
+git merge test
+git push origin master
