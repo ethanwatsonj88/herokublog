@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-
 var pgp = require('pg-promise')(/* options */)
 const cn = {
     host: 'ec2-34-225-162-157.compute-1.amazonaws.com',
