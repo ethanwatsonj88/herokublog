@@ -17,10 +17,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Users</h1>
-        {
-          this.state.posts.map(post => post.author)
-        }
+        <h1>Posts</h1>
+        <div>
+        { this.state.posts.map(post => post.author) }
+        </div>
       </div>
     );
   }
