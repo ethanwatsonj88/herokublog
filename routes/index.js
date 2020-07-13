@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var db = require('../models/connection').db
+var db = require('../models/connection')
 
 
 /* GET home page. */
