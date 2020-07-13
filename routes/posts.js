@@ -3,7 +3,6 @@ var router = express.Router();
 
 var db = require('../models/connection')
 
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   db.query('SELECT * from post;')
