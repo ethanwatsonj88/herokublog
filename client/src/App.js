@@ -18,12 +18,22 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Posts</h1>
-        <div>
-        { this.state.posts.map(post => post.author) }
-        </div>
+        { this.state.posts.map((post, i) => {
+          return <Post info={post} key={i}></Post>;
+        })
+        }
       </div>
     );
   }
+}
+
+function Post(props) {
+  return (
+    <div>
+      <h1>Author: {props.info.author}</h1>
+      <p>Description: {props.info.description}</p>
+    </div>
+    );
 }
 
 export default App;
