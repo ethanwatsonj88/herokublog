@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Navbar from './components/Navbar'
+
 class App extends Component {
   state = {posts: []}
 
@@ -17,6 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar />
         <h1>Posts</h1>
         { this.state.posts.map((post, i) => {
           return <Post info={post} key={i}></Post>;
@@ -30,7 +33,8 @@ class App extends Component {
 function Post(props) {
   return (
     <div>
-      <h1>Author: {props.info.author}</h1>
+      <h2>Title: {props.info.title}</h2>
+      <h2>Author: {props.info.author}</h2>
       <p>Description: {props.info.description}</p>
     </div>
     );
