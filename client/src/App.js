@@ -34,8 +34,9 @@ function Post(props) {
   return (
     <div>
       <h2>Title: {props.info.title}</h2>
-      <h2>Author: {props.info.author}</h2>
-      <p>Description: {props.info.description}</p>
+      <h2>Owned: {props.info.is_owned.toString()}</h2>
+      <p>Release: {props.info.release_date}</p>
+      <p>Console: {props.info.release_date}</p>
     </div>
     );
 }

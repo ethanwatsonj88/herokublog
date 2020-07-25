@@ -12,7 +12,6 @@ router.get('/', function(req, res, next) {
   })
   .catch(function (error) {
     console.log('ERROR:', error)
-    res.json({ author: "fail" })
   })
 });
 

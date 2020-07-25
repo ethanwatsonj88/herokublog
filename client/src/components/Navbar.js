@@ -1,12 +1,14 @@
 import React from 'react';
  
 const Navbar = () => {
-    return (
-       <ul>
-          <li>Contact US</li>
-          <li>Contact US page body content</li>
-       </ul>
-    );
+	let items = ['Home', 'Authors', 'Contact'];
+
+
+  return (
+     <ul className="navbar">
+        {items.map(item => <li className="navbar-item">{item}</li>)}
+     </ul>
+  );
 }
  
 export default Navbar;
