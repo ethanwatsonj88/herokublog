@@ -36,7 +36,10 @@ function Post(props) {
       <h2>Title: {props.info.title}</h2>
       <h2>Owned: {props.info.is_owned.toString()}</h2>
       <p>Release: {props.info.release_date}</p>
-      <p>Console: {props.info.release_date}</p>
+      <p>Console: {props.info.console}</p>
+      <p>Price: ${props.info.price}</p>
+      <p>Nintendo or official site: <a href={props.info.page_link}>Here</a></p>
+      <p>Video link: <a href={props.info.video_link}>Here</a></p>
     </div>
     );
 }
