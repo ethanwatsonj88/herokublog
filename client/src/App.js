@@ -21,10 +21,12 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <h1>Posts</h1>
-        { this.state.posts.map((post, i) => {
-          return <Post info={post} key={i}></Post>;
-        })
-        }
+        <div className="posts"> 
+          { this.state.posts.map((post, i) => {
+            return <Post info={post} key={i}></Post>;
+          })
+          }
+        </div>
       </div>
     );
   }
@@ -32,7 +34,7 @@ class App extends Component {
 
 function Post(props) {
   return (
-    <div>
+    <div className="post">
       <h2>Title: {props.info.title}</h2>
       <h2>Owned: {props.info.is_owned.toString()}</h2>
       <p>Release: {props.info.release_date}</p>

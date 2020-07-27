@@ -14,8 +14,8 @@ CREATE TABLE post (
 
 select * from post;
 
-INSERT INTO post (title, is_owned, release_date, console, price, pagelink, videolink, tag)
-VALUES 	('Tales of Vesperia', false, 'released', 'Nintendo Switch', 50, 'https://www.nintendo.com/games/detail/tales-of-vesperia-definitive-edition-switch/', null, 'jrpg'),
+INSERT INTO post (title, is_owned, release_date, console, price, page_link, video_link, tag)
+VALUES 	('Tales of Vesperia', false, 'released', 'Nintendo Switch', 50, 'https://www.nintendo.com/games/detail/tales-of-vesperia-definitive-edition-switch/', 'https://www.youtube.com/watch?v=4Vn8x3o6rCA', 'jrpg'),
 		('Xenoblade Chronicles Definitive Edition', true, 'released', 'Nintendo Switch', 60, null, null, 'jrpg'),
 		('Xenoblade Chronicles 2', false, 'released', 'Nintendo Switch', 60, null, null, 'jrpg'),
 		('Ni No Kuni', false, 'released', 'Nintendo Switch', 60, null, null, 'jrpg');
